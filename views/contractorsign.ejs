@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <title>Dados do contratante</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.0.2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  </head>
+  <body>
+
+    <div class="container">
+        <div class="card text-start|center|end">
+         <form action="/contractor/sign" method="POST" id="formContractorSign"> 
+          <div class="card-body">
+            <h4 class="card-title">DADOS PESSOAIS DO(A) CONTRATANTE</h4>
+            <hr>
+            <!-- Contractor dates-->
+            <div class="card-text" id="contractor">
+              
+              <div class="mb-3">
+                <small>Campos obrigatorios (*)</small>
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">Nome *</label>
+                <input type="text"  class="form-control" name="name" id="name" aria-describedby="helpId" placeholder="" required>
+                <small id="helpId" class="form-text text-muted">Informe o nome completo</small>
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">Data nascimento *</label>
+                <input type="date" class="form-control" name="birth" id="birth" aria-describedby="helpId" placeholder="" required>
+                <small id="helpId" class="form-text text-muted">Informe sua data de nascimento</small>
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">Naturalidade - UF *</label>
+                <input type="text" class="form-control" name="birth_place" id="birth_place" aria-describedby="helpId" placeholder="">
+                <small id="helpId" class="form-text text-muted">Local de registro de nasceu. Ex: Anápolis - GO, Taguatinga - DF, Sobral - CE</small>
+              </div>
+             <div class="mb-3">
+               <label for="" class="form-label">CPF *</label>
+               <input type="text" class="form-control" name="cpf" id="cpf" aria-describedby="helpId" placeholder="">
+               <small id="helpId" class="form-text text-muted">Informe o CPF</small>
+             </div>
+             <div class="mb-3">
+               <label for="" class="form-label">RG número *</label>
+               <input type="text" class="form-control" name="rg_number" id="rg_number" aria-describedby="helpId" placeholder="">
+               <small id="helpId" class="form-text text-muted">Número do RG. Ex: 1235458</small>
+             </div>
+             <div class="mb-3">
+               <label for="" class="form-label">RG Orgão *</label>
+               <input type="text" class="form-control" name="rg_organ" id="rg_organ" aria-describedby="helpId" placeholder="">
+               <small id="helpId" class="form-text text-muted">Sliga do orgão emissor do RG. Ex: SSP - Secretaria de Estado de Segurança Pública</small>
+             </div>
+             <div class="mb-3">
+               <label for="" class="form-label">RG UF *</label>
+               <select class="form-select" name="rg_uf" id="rg_uf">
+                  <option value="AC">Acre</option>
+                  <option value="AL">Alagoas</option>
+                  <option value="AP">Amapá</option>
+                  <option value="AM">Amazonas</option>
+                  <option value="BA">Bahia</option>
+                  <option value="CE">Ceará</option>
+                  <option value="DF">Distrito Federal</option>
+                  <option value="ES">Espírito Santo</option>
+                  <option value="GO">Goiás</option>
+                  <option value="MA">Maranhão</option>
+                  <option value="MT">Mato Grosso</option>
+                  <option value="MS">Mato Grosso do Sul</option>
+                  <option value="MG">Minas Gerais</option>
+                  <option value="PA">Pará</option>
+                  <option value="PB">Paraíba</option>
+                  <option value="PR">Paraná</option>
+                  <option value="PE">Pernambuco</option>
+                  <option value="PI">Piauí</option>
+                  <option value="RJ">Rio de Janeiro</option>
+                  <option value="RN">Rio Grande do Norte</option>
+                  <option value="RS">Rio Grande do Sul</option>
+                  <option value="RO">Rondônia</option>
+                  <option value="RR">Roraima</option>
+                  <option value="SC">Santa Catarina</option>
+                  <option value="SP">São Paulo</option>
+                  <option value="SE">Sergipe</option>
+                  <option value="TO">Tocantins</option>
+               </select>
+             </div>
+             <div class="mb-3">
+               <label for="" class="form-label">E-mail *</label>
+               <input type="text" class="form-control" name="email" id="email" aria-describedby="helpId" placeholder="">
+               <b id="helpId" class="form-text text-muted">Informe o email.&nbsp;Ex: fulano@gmail.com - <b>Irá recebe cópia do contrato neste email</b></small>
+             </div>
+             <div class="mb-3">
+               <label for="" class="form-label">Celular *</label>
+               <input type="number" class="form-control" name="cell_phone" id="cell_phone" aria-describedby="helpId" placeholder="99 99999999">
+               <small id="helpId" class="form-text text-muted">Informe seu DDD e celular.&nbsp;Ex: 99 99999999</small>
+             </div>
+            <div class="mb-3">
+               <label for="" class="form-label">CEP *</label>
+               <input type="text" class="form-control" name="cep" id="cep" aria-describedby="helpId" placeholder="">
+               <small id="helpId" class="form-text text-muted">Informe seu CEP <b>sem</b> o hífen</small>
+             </div>
+             <div class="mb-3">
+               <label for="" class="form-label">Bairro *</label>
+               <input type="text" class="form-control" name="district" id="district" aria-describedby="helpId" placeholder="">
+               <small id="helpId" class="form-text text-muted">Informe o bairro do seu endereço.</small>
+             </div>
+             <div class="mb-3">
+               <label for="" class="form-label">Localidade *</label>
+               <input type="text" class="form-control" name="city" id="city" aria-describedby="helpId" placeholder="">
+               <small id="helpId" class="form-text text-muted">Informe a cidade do seu endereço.</small>
+             </div>
+             <div class="mb-3">
+              <label for="" class="form-label">UF *</label>
+                <select class="form-select" name="uf" id="uf">
+                  <option value="AC">Acre</option>
+                  <option value="AL">Alagoas</option>
+                  <option value="AP">Amapá</option>
+                  <option value="AM">Amazonas</option>
+                  <option value="BA">Bahia</option>
+                  <option value="CE">Ceará</option>
+                  <option value="DF">Distrito Federal</option>
+                  <option value="ES">Espírito Santo</option>
+                  <option value="GO">Goiás</option>
+                  <option value="MA">Maranhão</option>
+                  <option value="MT">Mato Grosso</option>
+                  <option value="MS">Mato Grosso do Sul</option>
+                  <option value="MG">Minas Gerais</option>
+                  <option value="PA">Pará</option>
+                  <option value="PB">Paraíba</option>
+                  <option value="PR">Paraná</option>
+                  <option value="PE">Pernambuco</option>
+                  <option value="PI">Piauí</option>
+                  <option value="RJ">Rio de Janeiro</option>
+                  <option value="RN">Rio Grande do Norte</option>
+                  <option value="RS">Rio Grande do Sul</option>
+                  <option value="RO">Rondônia</option>
+                  <option value="RR">Roraima</option>
+                  <option value="SC">Santa Catarina</option>
+                  <option value="SP">São Paulo</option>
+                  <option value="SE">Sergipe</option>
+                  <option value="TO">Tocantins</option>
+                </select>
+              </div>
+             <div class="mb-3">
+               <label for="" class="form-label">Logradouro *</label>
+               <input type="text" class="form-control" name="public_pace" id="public_pace" aria-describedby="helpId" placeholder="">
+               <small id="helpId" class="form-text text-muted">Informe o elemento logradoouro de endereço. Ex: Área, Acesso, Acampamento, Acesso Local, Adro , Área Especial , Aeroporto , Alameda.... </small>
+             </div>
+             <div class="mb-3">
+               <label for="" class="form-label">Número *</label>
+               <input type="text" class="form-control" name="number" id="number" aria-describedby="helpId" placeholder="">
+               <small id="helpId" class="form-text text-muted">Informe o número do APT, Casa, Lote ....</small>
+             </div>
+             <div class="mb-3">
+               <label for="" class="form-label">Complemento *</label>
+               <input type="text" class="form-control" name="adjunct" id="adjunct" aria-describedby="helpId" placeholder="Ex: Sobreloja, parte A, entrada lateral">
+               <small id="helpId" class="form-text text-muted">Informação relavante do seu endereço.</small>
+             </div>
+            </div>
+            <!-- End -->
+            <!-- Sign agreement-->
+            <h4 class="card-title">CONTRATO E ASSINATURA</h4>
+            <hr>
+            <div>
+            <div class="mb-3">
+              <h5><%= agreement.title %></h5>
+              <input type="hidden" name="title" value="<%= agreement.title %>" >
+              <textarea class="form-control" rows="3" readonly>
+                <%= agreement.context %>
+              </textarea>
+              <input type="hidden" name="context" value="<%= agreement.context %>">
+            </div>
+            <hr>
+            <div class="card-text" id="sign">
+              <label for="" class="form-label">Assim, logo abaixo:</label>
+              <div class="wrapper">
+                <canvas id="signature-pad" class="signature-pad" width=400 height=200></canvas>
+              </div>
+              <button id="clear" class="btn btn-warning">Limpar</button>
+              <button type="button" id="save-svg" class="btn btn-success">Salvar Assinatura</button>
+            </div>
+            <!-- End -->
+          </div>
+        </div>
+          <input type="hidden" name="agreementId" value="<%= agreement.id %>">
+          <input type="hidden" name="contractorSign" id="contractorSign">
+        </form>
+    </div>
+
+<!-- Bootstrap JavaScript Libraries -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/signature_pad@4.0.0/dist/signature_pad.umd.min.js"></script>
+<script>
+  const cepInput = document.getElementById('cep');
+  cepInput.addEventListener("blur",()=>{
+    if(cepInput.value != undefined){
+      let url = "http://viacep.com.br/ws/";
+      url = url.concat(cepInput.value,"/json");
+        axios.get(url).then(response => {
+            if(!response.data.erro){ 
+              let adresse = response.data;
+              console.log(adresse);
+              document.getElementById('public_pace').value = adresse.logradouro;
+              document.getElementById('district').value = adresse.bairro;
+              document.getElementById('city').value = adresse.localidade;
+              document.getElementById('uf').value = adresse.uf;
+            }
+        }).catch( error => {
+            console.log(error);
+        });
+        
+      }
+  })
+  const canvas = document.querySelector("canvas");
+  const signaturePad = new SignaturePad(canvas);
+
+  document.getElementById('clear').addEventListener('click', function () {
+    signaturePad.clear();
+  });
+  document.getElementById('save-svg').addEventListener('click', function () {
+    if (signaturePad.isEmpty()) {
+      return alert("Please provide a signature first.");
+    }
+    
+  var data = signaturePad.toDataURL();
+  //var data = signaturePad.toDataURL('image/svg+xml');
+  //var data = signaturePad.toDataURL("image/jpeg"); 
+   //document.getElementById('contractorSign').value = atob(data.split(',')[1]);
+    document.getElementById('contractorSign').value = data;
+    //console.log(document.getElementById('sign').value);
+    //document.getElementById('formContractorSign').setAttribute('ACTION','/contractor/check/');
+    //document.getElementById('formContractorSign').submit(); 
+    document.getElementById('formContractorSign').setAttribute('ACTION','/contractor/sign'); 
+    document.getElementById('formContractorSign').submit(); 
+    /* console.log(document.getElementById('sign').value);
+    console.log(data);
+    console.log(atob(data.split(',')[1]));
+    window.open(data);
+    */
+});
+
+</script>
+
+  </body>
+</html>

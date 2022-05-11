@@ -1,0 +1,36 @@
+{
+  "name": "sign",
+  "version": "0.0.1",
+  "description": "Soft to sign of documents",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ronaldoxoliveira/sign.git"
+  },
+  "author": "Ronaldo Oliveira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ronaldoxoliveira/sign/issues"
+  },
+  "homepage": "https://github.com/ronaldoxoliveira/sign#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parse": "^0.1.0",
+    "dotenv": "^16.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "express-session": "^1.17.2",
+    "html-pdf": "^3.0.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.16.2",
+    "slugify": "^1.6.5",
+    "validator": "^13.7.0"
+  },
+  "devDependencies": {
+    "package.json": "^2.0.1"
+  }
+}
