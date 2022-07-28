@@ -5,7 +5,7 @@ const session = require("express-session");
 const bcrypt = require('bcryptjs');
 require('dotenv').config();
 const connection = require("./models/database");
-//connection.sync({force:true});
+//connection.sync({force:true}); //create tables
 
 const accountsController = require("./controllers/AccountsControllers");
 const contractorsController = require("./controllers/ContractorsControllers");
