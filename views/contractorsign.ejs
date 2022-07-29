@@ -15,47 +15,47 @@
     <div class="container">
         <div class="card text-start|center|end">
          <form action="/contractor/sign" method="POST" id="formContractorSign"> 
-          <div class="card-body">
+          <div class="card-body" id="contractor">
             <h4 class="card-title">DADOS PESSOAIS DO(A) CONTRATANTE</h4>
             <hr>
             <!-- Contractor dates-->
-            <div class="card-text" id="contractor">
+            <div class="card-text">
               
               <div class="mb-3">
                 <small>Campos obrigatorios (*)</small>
               </div>
               <div class="mb-3">
-                <label for="" class="form-label">Nome *</label>
+                <label for="" class="form-label">Nome completo *</label>
                 <input type="text"  class="form-control" name="name" id="name" aria-describedby="helpId" placeholder="" required>
-                <small id="helpId" class="form-text text-muted">Informe o nome completo</small>
+                <small id="helpId" class="form-text text-muted">Informe o nome completo. Ex: Fulano da Silva Perreira</small>
               </div>
               <div class="mb-3">
                 <label for="" class="form-label">Data nascimento *</label>
                 <input type="date" class="form-control" name="birth" id="birth" aria-describedby="helpId" placeholder="" required>
-                <small id="helpId" class="form-text text-muted">Informe sua data de nascimento</small>
+                <small id="helpId" class="form-text text-muted">Informe sua data de nascimento. Ex:  01/04/1980</small>
               </div>
               <div class="mb-3">
                 <label for="" class="form-label">Naturalidade - UF *</label>
-                <input type="text" class="form-control" name="birth_place" id="birth_place" aria-describedby="helpId" placeholder="">
+                <input type="text" class="form-control" name="birth_place" id="birth_place" aria-describedby="helpId" placeholder="" required>
                 <small id="helpId" class="form-text text-muted">Local de registro de nasceu. Ex: Anápolis - GO, Taguatinga - DF, Sobral - CE</small>
               </div>
              <div class="mb-3">
                <label for="" class="form-label">CPF *</label>
-               <input type="text" class="form-control" name="cpf" id="cpf" aria-describedby="helpId" placeholder="">
-               <small id="helpId" class="form-text text-muted">Informe o CPF</small>
+               <input type="text" class="form-control" name="cpf" id="cpf" aria-describedby="helpId" placeholder="" required>
+               <small id="helpId" class="form-text text-muted">Informe o CPF sem ponto e traço. Ex: 00000000000</small>
              </div>
              <div class="mb-3">
-               <label for="" class="form-label">RG número *</label>
-               <input type="text" class="form-control" name="rg_number" id="rg_number" aria-describedby="helpId" placeholder="">
+               <label for="" class="form-label">RG só os números *</label>
+               <input type="text" class="form-control" name="rg_number" id="rg_number" aria-describedby="helpId" placeholder="" required>
                <small id="helpId" class="form-text text-muted">Número do RG. Ex: 1235458</small>
              </div>
              <div class="mb-3">
                <label for="" class="form-label">RG Orgão *</label>
-               <input type="text" class="form-control" name="rg_organ" id="rg_organ" aria-describedby="helpId" placeholder="">
-               <small id="helpId" class="form-text text-muted">Sliga do orgão emissor do RG. Ex: SSP - Secretaria de Estado de Segurança Pública</small>
+               <input type="text" class="form-control" name="rg_organ" id="rg_organ" aria-describedby="helpId" placeholder="" required>
+               <small id="helpId" class="form-text text-muted">Sliga do orgão emissor do RG. Ex: SSPDF - Secretaria de Estado de Segurança Pública Distrito Federal</small>
              </div>
              <div class="mb-3">
-               <label for="" class="form-label">RG UF *</label>
+               <label for="" class="form-label">RG UF -  O estado onde foi expedido o RG *</label>
                <select class="form-select" name="rg_uf" id="rg_uf">
                   <option value="AC">Acre</option>
                   <option value="AL">Alagoas</option>
@@ -87,28 +87,28 @@
                </select>
              </div>
              <div class="mb-3">
-               <label for="" class="form-label">E-mail *</label>
-               <input type="text" class="form-control" name="email" id="email" aria-describedby="helpId" placeholder="">
+               <label for="" class="form-label">E-mail  - Recebera cópia do contrato por este*</label>
+               <input type="text" class="form-control" name="email" id="email" aria-describedby="helpId" placeholder="" required>
                <b id="helpId" class="form-text text-muted">Informe o email.&nbsp;Ex: fulano@gmail.com - <b>Irá recebe cópia do contrato neste email</b></small>
              </div>
              <div class="mb-3">
                <label for="" class="form-label">Celular *</label>
-               <input type="number" class="form-control" name="cell_phone" id="cell_phone" aria-describedby="helpId" placeholder="99 99999999">
+               <input type="number" class="form-control" name="cell_phone" id="cell_phone" aria-describedby="helpId" placeholder="99 99999999" required>
                <small id="helpId" class="form-text text-muted">Informe seu DDD e celular.&nbsp;Ex: 99 99999999</small>
              </div>
             <div class="mb-3">
                <label for="" class="form-label">CEP *</label>
-               <input type="text" class="form-control" name="cep" id="cep" aria-describedby="helpId" placeholder="">
+               <input type="text" class="form-control" name="cep" id="cep" aria-describedby="helpId" placeholder="" required>
                <small id="helpId" class="form-text text-muted">Informe seu CEP <b>sem</b> o hífen</small>
              </div>
              <div class="mb-3">
                <label for="" class="form-label">Bairro *</label>
-               <input type="text" class="form-control" name="district" id="district" aria-describedby="helpId" placeholder="">
+               <input type="text" class="form-control" name="district" id="district" aria-describedby="helpId" placeholder="" required>
                <small id="helpId" class="form-text text-muted">Informe o bairro do seu endereço.</small>
              </div>
              <div class="mb-3">
                <label for="" class="form-label">Localidade *</label>
-               <input type="text" class="form-control" name="city" id="city" aria-describedby="helpId" placeholder="">
+               <input type="text" class="form-control" name="city" id="city" aria-describedby="helpId" placeholder="" required>
                <small id="helpId" class="form-text text-muted">Informe a cidade do seu endereço.</small>
              </div>
              <div class="mb-3">
@@ -145,17 +145,17 @@
               </div>
              <div class="mb-3">
                <label for="" class="form-label">Logradouro *</label>
-               <input type="text" class="form-control" name="public_pace" id="public_pace" aria-describedby="helpId" placeholder="">
+               <input type="text" class="form-control" name="public_pace" id="public_pace" aria-describedby="helpId" placeholder="" required>
                <small id="helpId" class="form-text text-muted">Informe o elemento logradoouro de endereço. Ex: Área, Acesso, Acampamento, Acesso Local, Adro , Área Especial , Aeroporto , Alameda.... </small>
              </div>
              <div class="mb-3">
                <label for="" class="form-label">Número *</label>
-               <input type="text" class="form-control" name="number" id="number" aria-describedby="helpId" placeholder="">
+               <input type="text" class="form-control" name="number" id="number" aria-describedby="helpId" placeholder="" required>
                <small id="helpId" class="form-text text-muted">Informe o número do APT, Casa, Lote ....</small>
              </div>
              <div class="mb-3">
                <label for="" class="form-label">Complemento *</label>
-               <input type="text" class="form-control" name="adjunct" id="adjunct" aria-describedby="helpId" placeholder="Ex: Sobreloja, parte A, entrada lateral">
+               <input type="text" class="form-control" name="adjunct" id="adjunct" aria-describedby="helpId" placeholder="Ex: Sobreloja, parte A, entrada lateral" required>
                <small id="helpId" class="form-text text-muted">Informação relavante do seu endereço.</small>
              </div>
             </div>
@@ -174,11 +174,11 @@
             </div>
             <hr>
             <div class="card-text" id="sign">
-              <label for="" class="form-label">Assim, logo abaixo:</label>
+              <label for="" class="form-label">Para assimar, logo abaixo:</label>
               <div class="wrapper">
                 <canvas id="signature-pad" class="signature-pad" width=400 height=200></canvas>
               </div>
-              <button id="clear" class="btn btn-warning">Limpar</button>
+              <button type="button" id="clear" class="btn btn-warning">Limpar</button>
               <button type="button" id="save-svg" class="btn btn-success">Salvar Assinatura</button>
             </div>
             <!-- End -->
@@ -188,6 +188,26 @@
           <input type="hidden" name="contractorSign" id="contractorSign">
         </form>
     </div>
+    <br>
+    <div  id="notice" class="mb-3">
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" id="staticBackdropBody">        
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
 
 <!-- Bootstrap JavaScript Libraries -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
@@ -195,6 +215,14 @@
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.0.0/dist/signature_pad.umd.min.js"></script>
 <script>
+   var myModal = new bootstrap.Modal(document.getElementById('staticBackdrop'), {
+        keyboard: false
+   })
+   let showMyModal = (modalLabel, modalBody) => {
+      document.getElementById('staticBackdropLabel').innerText = modalLabel;
+      document.getElementById('staticBackdropBody').innerText = modalBody;
+      myModal.show()
+   }
   const cepInput = document.getElementById('cep');
   cepInput.addEventListener("blur",()=>{
     if(cepInput.value != undefined){
@@ -220,10 +248,12 @@
 
   document.getElementById('clear').addEventListener('click', function () {
     signaturePad.clear();
+    return false;
   });
   document.getElementById('save-svg').addEventListener('click', function () {
     if (signaturePad.isEmpty()) {
-      return alert("Please provide a signature first.");
+      showMyModal("Campo da assintura", "Precisa fazer preenchimento ou assinar")
+      return false
     }
     
   var data = signaturePad.toDataURL();
